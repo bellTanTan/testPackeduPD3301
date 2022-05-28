@@ -5,7 +5,7 @@ FabGL 配下で NEC PC-8001 の画面表示を行う VGA ディスプレイド�
 # 2. 詳細説明
 
 長い間メンテナンスされている鶏肋電算研究所 [N80の部屋](http://home1.catvmics.ne.jp/~kanemoto/n80/index.html) で公開されている
-[n80pi](http://home1.catvmics.ne.jp/~kanemoto/dist/n80pi20210814.tar.gz) を FabGL 活用して移植する際に Canvas レベルは実用では無いので
+[n80pi](http://home1.catvmics.ne.jp/~kanemoto/dist/n80pi20210814.tar.gz) を FabGL 活用して移植する際に Canvas レベルでの実装はアプリレベルの為
 専用の VGA ディスプレイドライバが必要とわかりました。このドライバは FabGL VGADirectController クラスを継承した CGA なドライバになります。
 
 NEC PC-8001 の画面描画属性情報は以下のようになります。
