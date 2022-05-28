@@ -36,10 +36,10 @@ n80pi はこれらの情報を以下のようにパックしています。
 
 この単体テストプログラムを動作させるためには FabGL のインストールと microSD カードが必要です。microSD カードには以下の構造でフォントファイルを配置します。
 
- microSD
- /
- +--PC8001
-    +-- PC-8001.FON
+  microSD<br>
+  /<br>
+  +--PC8001<br>
+    +-- PC-8001.FON<br>
 
 フォントファイルは [n80pi20210814.tar.gz](http://home1.catvmics.ne.jp/~kanemoto/dist/n80pi20210814.tar.gz)より入手できます。
 このファイルは 4096 byte で、簡易グラフックスの bit データを展開済みのデータになります。
