@@ -14,32 +14,32 @@ NEC PC-8001 の画面描画属性情報は以下のようになります。
 
 n80pi はこれらの情報を以下のようにパックしています。
 
-    char attr<br>
-    b76543210<br>
-    |||||||+--- B<br>
-    ||||||+---- R<br>
-    |||||+----- G<br>
-    ||||+------ upper line<br>
-    |||+------- simple Graphics<br>
-    ||+-------- reverse<br>
-    |+--------- erase(secret)<br>
-    +---------- under line<br>
+    char attr
+    b76543210
+    |||||||+--- B
+    ||||||+---- R
+    |||||+----- G
+    ||||+------ upper line
+    |||+------- simple Graphics
+    ||+-------- reverse
+    |+--------- erase(secret)
+    +---------- under line
 
 元のブリンクはビット展開されていません。タイミングを合わせてパック側のリバースが1/0する形式です。
 結果、元々の NEC PC-8001 の v-ram より以下のように展開されます。
 
-    +0        +1        +2        +3        ...<br>
-    char code char attr char code char attr<br>
-    8bit      8bit      8bit      8bit<br>
+    +0        +1        +2        +3        ...
+    char code char attr char code char attr
+    8bit      8bit      8bit      8bit
 
 この構造はいわゆる CGA フレームバッファです。このフレームバッファを FabGL の VGA としてスキャンラインビットマップ展開すれば画面描画が出来ると言う事になります。
 
 この単体テストプログラムを動作させるためには FabGL のインストールと microSD カードが必要です。microSD カードには以下の構造でフォントファイルを配置します。
 
-    microSD<br>
-    /<br>
-    +--PC8001<br>
-        +-- PC-8001.FON<br>
+    microSD
+    /
+    +--PC8001
+       +-- PC-8001.FON
 
 フォントファイルは [n80pi20210814.tar.gz](http://home1.catvmics.ne.jp/~kanemoto/dist/n80pi20210814.tar.gz)より入手できます。
 このファイルは 4096 byte で、簡易グラフックスの bit データを展開済みのデータになります。
